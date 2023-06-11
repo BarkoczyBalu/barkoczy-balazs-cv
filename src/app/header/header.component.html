@@ -1,0 +1,46 @@
+<nav class="sticky top-0 bg-white dark:bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-primary-600 hover:bg-primary-600 hover:text-white dark:text-rose-400" aria-controls="mobile-menu" aria-expanded="false" (click)="isMenuOpen = !isMenuOpen">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex justify-end items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="mr-auto space-x-4">
+          <fa-icon [icon]="faJediOrder" size="2x" class="text-primary-600 dark:text-white"></fa-icon>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer" [(ngModel)]="isDarkMode" (change)="toggleDarkMode()">
+            <div class="w-11 h-6 bg-primary-600 rounded-full peer dark:bg-rose-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-rose-400"></div>
+          </label>
+          <fa-icon [icon]="faEmpire" size="2x" class="text-gray-700 dark:text-rose-400"></fa-icon>
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="right-0 space-x-4">
+            <a href="#aboutMe" class="text-primary-600 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium dark:text-white">Dashboard</a>
+            <a href="#team" class="text-primary-600 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium dark:text-white">Team</a>
+            <a href="#projects" class="text-primary-600 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium dark:text-white">Projects</a>
+            <a href="#" class="text-primary-600 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium dark:text-white">Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div *ngIf="isMenuOpen" class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <a href="#aboutMe" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md" aria-current="page">Dashboard</a>
+      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Team</a>
+      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Projects</a>
+      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Calendar</a>
+    </div>
+  </div>
+</nav>

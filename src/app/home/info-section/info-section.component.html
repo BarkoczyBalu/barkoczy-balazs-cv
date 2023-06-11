@@ -1,0 +1,13 @@
+<div *ngIf="isBlue" class="separator-before dark:separator-before-dark"></div>
+<section class="w-full" [ngClass]="isBlue ? 'bg-primary-600 dark:bg-rose-400' : 'bg-white dark:bg-gray-800'">
+  <div class="max-w-7xl mx-auto px-6">
+    <article class="py-8 rounded-xl flex flex-wrap justify-center items-center sm:flex-nowrap gap-10">
+      <aside>
+        <h1 [id]="id" class="pb-4 text-7xl" [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">About me</h1>
+        <p [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam!</p>
+      </aside>
+      <img src="https://picsum.photos/200" class="h-full rounded-full " alt="Things">
+    </article>
+  </div>
+</section>
+<div *ngIf="isBlue" class="separator-after dark:separator-after-dark"></div>

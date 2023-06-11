@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0097d8;
+    --color-secondary: #fb7185;
+  }
+}
+
+@layer utilities {
+  .separator {
+    &-before {
+      border-bottom: 5vw solid var(--color-primary);
+      border-left: 100vw solid transparent;
+    }
+  
+    &-after {
+      border-top: 5vw solid var(--color-primary);
+      border-right: 100vw solid transparent;
+    }
+  
+    &-before-dark {
+      border-bottom: 5vw solid var(--color-secondary);
+      border-left: 100vw solid transparent;
+    }
+  
+    &-after-dark {
+      border-top: 5vw solid var(--color-secondary);
+      border-right: 100vw solid transparent;
+    }
+  }
+}
+
+:root {
+  --header-height: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding:0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
