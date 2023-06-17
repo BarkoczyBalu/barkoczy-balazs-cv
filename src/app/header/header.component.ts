@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { IconDefinition, faEmpire, faJediOrder } from '@fortawesome/free-brands-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { IconDefinition, faEmpire, faJediOrder } from '@fortawesome/free-brands-
 export class HeaderComponent implements OnInit {
   public isMenuOpen: boolean = false;
   public isDarkMode: boolean = false;
+  public langImgUrl: string = "assets/flag_en.png";
 
   public faJediOrder: IconDefinition = faJediOrder;
   public faEmpire: IconDefinition = faEmpire;
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit {
     console.log(event);
   };
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
   }
@@ -30,11 +32,20 @@ export class HeaderComponent implements OnInit {
   }
 
   public toggleDarkMode() {
-    if (this.isDarkMode) {
-      document.documentElement.classList.add('dark');
+    this.isDarkMode 
+    ? document.documentElement.classList.add('dark')
+    : document.documentElement.classList.remove('dark');
+  }
+
+  public changeLanguage() {
+    if (this.langImgUrl.includes('en')) {
+      this.langImgUrl = "assets/flag_hu.png";
+      this.translate.use('hu');
     } else {
-      document.documentElement.classList.remove('dark');
+      this.langImgUrl = "assets/flag_en.png";
+      this.translate.use('en');
     }
+    
   }
 
 }

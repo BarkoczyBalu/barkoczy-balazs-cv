@@ -1,7 +1,7 @@
 <main>
   <section class="my-36 sm:my-72 mx-auto max-w-7xl px-6 text-5xl text-gray-700 dark:text-white">
-    <p>My name is <span class="text-6xl text-primary-600 dark:text-rose-400">Balázs Barkóczy.</span></p>
-    <p class="mt-10">Frontend developer.</p>
+    <p>{{ 'My name is' | translate }} <span class="text-6xl text-primary-600 dark:text-rose-400">{{ 'Balázs Barkóczy' | translate}}.</span></p>
+    <p class="mt-10">{{ 'Frontend developer' | translate }}.</p>
   </section>
   <app-info-section id="aboutMe" [isBlue]="true"></app-info-section>
   <app-info-section id="team" [isBlue]="false"></app-info-section>
