@@ -1,9 +1,32 @@
 <div *ngIf="isBlue" class="separator-before dark:separator-before-dark"></div>
-<section class="w-full" [ngClass]="isBlue ? 'bg-primary-600 dark:bg-rose-400' : 'bg-white dark:bg-gray-800'">
-  <div class="max-w-7xl mx-auto px-6">
-    <article class="py-8 rounded-xl flex flex-wrap justify-center items-center sm:flex-nowrap gap-10">
+<section [id]="id" class="w-full min-h-120 flex items-center" [ngClass]="isBlue ? 'bg-primary-600 dark:bg-rose-400' : 'bg-white dark:bg-gray-800'">
+  <div [ngSwitch]="id" class="max-w-7xl mx-auto px-6">
+    <article *ngSwitchCase="'about'" class="py-8 rounded-xl flex flex-wrap items-center sm:flex-nowrap gap-10">
       <aside>
-        <h1 [id]="id" class="pb-4 text-7xl" [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">About me</h1>
+        <h1 class="pb-4 text-7xl" [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">{{ 'About me' | translate }}</h1>
+        <p [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam!</p>
+      </aside>
+      <img src="https://picsum.photos/200" class="h-full rounded-full " alt="Things">
+    </article>
+    <article *ngSwitchCase="'tech'" class="py-8 rounded-xl flex flex-wrap items-center sm:flex-nowrap gap-10">
+      <aside>
+        <h1 class="pb-16 text-7xl" [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">{{ 'Tech' | translate }}</h1>
+        <div class="grid grid-cols-5 gap-4 justify-items-center items-center" >
+          <img src="../../../assets/tech/Flutter.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="Flutter logo">
+          <img src="../../../assets/tech/HTML5.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="HTML5 logo">
+          <img src="../../../assets/tech/JavaScript.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="JavaScript logo">
+          <img src="../../../assets/tech/TypeScript.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="Typescript logo">
+          <img src="../../../assets/tech/Angular.png" class="h-60 row-span-2 transition ease-in-out duration-500 hover:scale-125" alt="Angular logo">
+          <img src="../../../assets/tech/Sass.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="Sass logo">
+          <img src="../../../assets/tech/CSharp.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="C-sharp logo">
+          <img src="../../../assets/tech/PHP.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="PHP logo">
+          <img src="../../../assets/tech/MySQL.png" class="h-20 transition ease-in-out duration-500 hover:scale-125" alt="My-SQL logo">
+        </div>
+      </aside>
+    </article>
+    <article *ngSwitchCase="'projects'" class="py-8 rounded-xl flex flex-wrap items-center sm:flex-nowrap gap-10">
+      <aside>
+        <h1 class="pb-4 text-7xl" [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">{{ 'Projects' | translate }}</h1>
         <p [ngClass]="isBlue ? 'text-white dark:text-gray-800' : 'text-gray-700 dark:text-white'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa inventore id repudiandae, magni distinctio hic! Atque eligendi laboriosam dicta, debitis rerum impedit, recusandae aspernatur tempora eos ipsum ratione. Unde, magnam!</p>
       </aside>
       <img src="https://picsum.photos/200" class="h-full rounded-full " alt="Things">

@@ -5,6 +5,12 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    minHeight: {
+      '40': '10rem',
+      '80': '20rem',
+      '120': '30rem',
+      '160': '40rem',
+    },
     extend: {
       colors: {
         primary: {

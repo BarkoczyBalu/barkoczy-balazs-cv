@@ -25,12 +25,12 @@
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="right-0 space-x-4">
-            <a href="#aboutMe" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
-              dark:text-white dark:hover:bg-rose-400">Dashboard</a>
-            <a href="#team" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
-              dark:text-white dark:hover:bg-rose-400">Team</a>
+            <a href="#about" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
+              dark:text-white dark:hover:bg-rose-400">{{ 'About' | translate }}</a>
+            <a href="#tech" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
+              dark:text-white dark:hover:bg-rose-400">{{ 'Tech' | translate }}</a>
             <a href="#projects" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
-              dark:text-white dark:hover:bg-rose-400">Projects</a>
+              dark:text-white dark:hover:bg-rose-400">{{ 'Projects' | translate }}</a>
             <a href="#" class="text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-2 rounded-md text-xl font-medium 
               dark:text-white dark:hover:bg-rose-400">Calendar</a>
           </div>
@@ -42,9 +42,9 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <div *ngIf="isMenuOpen" class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pt-2 pb-3">
-      <a href="#aboutMe" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md" aria-current="page">Dashboard</a>
-      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Team</a>
-      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Projects</a>
+      <a href="#about-me" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md" aria-current="page">{{ 'About' | translate }}</a>
+      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">{{ 'Tech' | translate }}</a>
+      <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">{{ 'Projects' | translate }}</a>
       <a href="#" class="bg-white text-primary-600 block px-3 py-2 rounded-md text-base text-md">Calendar</a>
     </div>
   </div>
